@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Test_technical_code</title>
+    </head>
+    <body>
+        <h1>Test Javascript</h1>
+        <input type="number" id="Input Angka" />
+        <br>
+        <button name="hasil" onclick="hasil_segitiga()">Generate Segitiga</button>
+        <button name="hasil" onclick="hasil_bilanganGanjil()">Generate Bilangan Ganjil</button>
+        <button name="hasil" onclick="hasil_bilanganPrima()">Generate Bilangan Prima</button>
+        <h2>Result</h2>
+        <p id="hasil"></p>
+        <script>
+            // Hasil Bilangan Ganjil
+            function hasil_bilanganGanjil() {
+                let bilangan = document.getElementById("Input Angka").value
+                let hasil = document.getElementById("hasil")
+                if(bilangan % 2 == 0)
+                    hasil.innerText = "Hasil : Bilangan Genap"
+                else
+                    hasil.innerText = "Hasil : Bilangan Ganjil"
+            }
+            //Hasil Segitiga
+            function hasil_segitiga(panjang) {
+                let hasil = '';
+                    for (let i = 0; i < panjang; i++) {
+                    for (let j = 0; j <= i; j++) {
+                 hasil += '* ';
+                }
+             hasil += '\n';
+            }
+                return hasil;
+            }
+            // Hasil Bilangan Prima
+            function hasil_bilanganPrima(number){
+            var count = 0;
+            for(var i = 1;i<=number;i++){
+                if (hasil_bilanganPrima == i)
+                return i;
+            }
+            }
+        </script>
+    </body>
+</html>
